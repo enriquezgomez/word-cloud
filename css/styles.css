@@ -1,0 +1,75 @@
+[v-cloak] {
+  display: none;
+}
+
+body {
+  background-color: snow;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.topics {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  letter-spacing: .1vw;
+  padding: 6vh 12.9vw;
+  height: 550px;
+}
+
+.topics > li {
+  line-height: .8;
+  margin: .4vw .8vw;
+  transition-property: transform, text-shadow;
+  transition-duration: .6s;
+}
+
+.topics > li:hover {
+  cursor: pointer;
+  transform: scale(.94);
+}
+
+h1 {
+  padding-top: 4vh;
+  font-size: 1.7vmax;
+  font-weight: 400;
+  text-align: center;
+  color: slategray;
+  box-shadow: 0 -5px 5px -5px gainsboro;
+}
+
+.metadata {
+  justify-content: space-around;
+  margin: 4vh;
+  padding: 0;
+  font-size: 1.5vmax;
+  color: darkslategray;
+}
+
+.metadata :nth-child(1) {
+  color: seagreen;
+}
+
+.metadata :nth-child(2) {
+  color: gainsboro;
+}
+
+.metadata :nth-child(3) {
+  color: firebrick;
+}
+
+button {
+  position: absolute;
+  top: 5vh;
+  right: 9vw;
+  z-index: 10;
+}
+
+@media (max-width: 700px) {
+  #topics {
+    padding: 6vh 12.3vw;
+  }

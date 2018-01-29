@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Word Cloud</title>
+  <meta name="description" content="A word cloud based on sentiment">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+  <div v-cloak id="cloud">
+    <button v-on:click="sortWords">Click to sort</button>
+
+    <ul class="topics" v-bind:style=sortStyle>
+      <li v-for="topic in topics" v-on:click="displayMetadata"
+          v-bind:style="{ 'color': topic.color, 'fontSize': topic.size }">
+          {{ topic.label }}
+      </li>
+    </ul>
+
+    <h1 v-if="metadata.label" v-bind:style="{ 'color': metadata.color }">
+         {{metadata.label}} has a total of {{metadata.volume}} mentions </h1>
+    <h1 v-else> Click on the words to see their popularity </h1>
+
+    <ul v-if="metadata" class="metadata">
+      <li v-if="sentiment.positive"> Positive Mentions: {{sentiment.positive}} </li>
+      <li v-else> Positive Mentions: 0 </li>
+
+      <li v-if="sentiment.neutral"> Neutral Mentions: {{sentiment.neutral}} </li>
+      <li v-else> Neutral Mentions: 0 </li>
+
+      <li v-if="sentiment.negative"> Negative Mentions: {{sentiment.negative}} </li>
+      <li v-else> Negative Mentions: 0 </li>
+    </ul>
+    <ul v-else class="metadata"></ul>
+  </div>
+
+  <script src="lib/vue.min.js"></script>
+  <script src="lib/oboe.min.js"></script>
+  <script src="js/dataStream.js" type="module"></script>
+</body>
+</html>
