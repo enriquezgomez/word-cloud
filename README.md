@@ -1,5 +1,6 @@
 ![alt text](screenshots/cover.png "This is a screenshot of the project")
 
+<br />
 To run the project locally a local web server is required
 
 Therefore an option is to install it via npm, like so:
@@ -30,5 +31,3 @@ To this: <br />
 ... <br />
 const data = oboe('https://api.myjson.com/bins/1ge1ld') <br />
 ... <br />
-# word-cloud
-# word-cloud
