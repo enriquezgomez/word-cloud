@@ -1,3 +1,5 @@
+![alt text](screenshots/cover.png "This is a screenshot of the project")
+
 To run the project locally a local web server is required
 
 Therefore an option is to install it via npm, like so:
