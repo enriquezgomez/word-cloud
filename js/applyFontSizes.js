@@ -25,6 +25,6 @@ export const applyFontSizes = topics => {
     .map(t => t.rank = i + 1));
 
   // With the rank, the array of font sizes gets embedded within the size property
-  [1.1, 1.6, 2.8, 5, 8.4, 13]
+  [1, 1.4, 2.2, 3.3, 5.4, 8]
   .map((v, i) => topics.filter(t => t.rank == i + 1).map(t => t.size = `${v}vw`));
 }

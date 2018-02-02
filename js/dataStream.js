@@ -9,13 +9,12 @@ const data = oboe('data/topics.json')
   })
   .done(obj => {
     // Upon JSON stream completion the data is visualized with an instance of Vue
-    new Vue({
+    var vm = new Vue({
       el: '#cloud',
       data: {
         topics: obj.topics,
         metadata: '',
         sentiment: '',
-        sortStyle: ''
       },
       beforeCreate: () => applyFontSizes(obj.topics),
       methods: {
@@ -27,10 +26,8 @@ const data = oboe('data/topics.json')
         sortWords() {
           this.topics = obj.topics.map((t) => [Math.random(),t])
           .sort((a,b) => a[0]-b[0]).map((t) => t[1])
-          this.sortStyle = {
-             'transform': 'scale(.77) translate(0, -7.7vh)', 'align-items': 'center'
-          }
         }
       }
-    })
+    });
+    vm.sortWords();
   });

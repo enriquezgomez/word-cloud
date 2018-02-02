@@ -11,7 +11,7 @@
   <div v-cloak id="cloud">
     <button v-on:click="sortWords">Click to sort</button>
 
-    <ul class="topics" v-bind:style=sortStyle>
+    <ul class="topics">
       <li v-for="topic in topics" v-on:click="displayMetadata"
           v-bind:style="{ 'color': topic.color, 'fontSize': topic.size }">
           {{ topic.label }}

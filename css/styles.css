@@ -15,15 +15,15 @@ ul {
 .topics {
   flex-wrap: wrap;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   letter-spacing: .1vw;
-  padding: 6vh 12.9vw;
-  height: 550px;
+  padding: 6vh 17vw 5vh;
+  height: 600px;
 }
 
 .topics > li {
-  line-height: .8;
-  margin: .4vw .8vw;
+  line-height: .9;
+  margin: .6vw;
   transition-property: transform, text-shadow;
   transition-duration: .6s;
 }
@@ -34,8 +34,8 @@ ul {
 }
 
 h1 {
-  padding-top: 4vh;
-  font-size: 1.7vmax;
+  padding-top: 3.2vh;
+  font-size: 1.4vmax;
   font-weight: 400;
   text-align: center;
   color: slategray;
@@ -46,7 +46,7 @@ h1 {
   justify-content: space-around;
   margin: 4vh;
   padding: 0;
-  font-size: 1.5vmax;
+  font-size: 1.2vmax;
   color: darkslategray;
 }
 
@@ -64,8 +64,8 @@ h1 {
 
 button {
   position: absolute;
-  top: 5vh;
-  right: 9vw;
+  top: 4.7vh;
+  right: 7vw;
   z-index: 10;
 }
 
